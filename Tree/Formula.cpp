@@ -80,6 +80,7 @@ double Formula::calculate()
 	}catch(string errorMSG){
 		cerr<<errorMSG<<endl;
 	}
+	return result;
 }
 
 inline bool isOperator(char ch)
