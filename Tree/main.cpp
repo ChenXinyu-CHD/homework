@@ -5,14 +5,9 @@
  * g++ options : -O0;
  * */
 
-//This is the defination of class Digit
-//which is decleared in Digit.h;
-
 //You should better build it
 //without -std=c++11 -O2;
 
-#include "Formula.h"
-#include "Digit.h"
 #include <iostream>
 #include "Formula.h"
 

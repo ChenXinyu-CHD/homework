@@ -80,6 +80,7 @@ double Formula::calculate()
 	}catch(string errorMSG){
 		cerr<<errorMSG<<endl;
 	}
+
 	return result;
 }
 
@@ -143,7 +144,6 @@ inline string::iterator findTheLowest(string::iterator begin,string::iterator en
 	string::iterator iter = end;
 	string::iterator result;
 	char theOperator = '#';
-	int flag = 0;
 
 	while(iter != begin)
 	{
@@ -151,14 +151,13 @@ inline string::iterator findTheLowest(string::iterator begin,string::iterator en
 			iter = findLeft(iter);
 		if(iter == begin)
 			break;
-		if(isOperator(*iter) && flag < 2)
+		if(isOperator(*iter))
 		{
 			if(lower(*iter,theOperator))
 			{
 				theOperator = *iter;
 				result = iter;
 			}
-			++flag;
 		}
 		--iter;
 	}
